@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+         xmlns:batch="http://www.springframework.org/schema/batch"
+         xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+      http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+      ">
+      <bean id="List1" class="Assignments.Questions">
+       <property name="questionId" value="1"/>
+      <property name ="Question" value="what is java?"/>
+     
+    <!--   <property name="solution">
+      <array value-type ="java.lang.String">
+      <value>It is a programming language</value>
+      <value>it is a high level programming language</value>
+      </array>
+       </property>  -->
+    <!--  <property name="solution"> -->
+  <!--  <set>
+   <value>It is a programming language</value>
+   <value>It is a high level programming language</value>
+   </set>
+    </property> -->
+  
+    <property name="solution">
+    <map>
+    <entry key="1"><value>It is a programming language</value> </entry>
+    <entry key="2"><value>It is high level programming language</value></entry>
+    </map>
+    </property>
+
+      </bean>
+
+
+
+  </beans>
+

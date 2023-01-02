@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+         xmlns:batch="http://www.springframework.org/schema/batch"
+         xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+      http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+      ">
+ <bean id="customer" class="DrawingApplication.Customer">
+ <property name="customerId" value="1"/>
+ <property name="customerName" value="Sushma"/>
+  <property name="customerContact" value="123457"/>
+   <property name="customerAddress" ref="address1"/>
+
+
+ </bean>
+
+ <bean id="address1" class="DrawingApplication.Address">
+<property name="city" value="Guntur"/>
+<property name="street" value="Lakshmipuram"/>
+<property name="state" value="Andhra pradesh"/>
+<property name="zip" value="523260"/>
+<property name="country" value="INDIA"/>
+
+</bean>
+
+
+
+
+
+
+
+     </beans>

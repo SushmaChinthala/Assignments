@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+         xmlns:batch="http://www.springframework.org/schema/batch"
+         xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+      http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+      ">
+
+      <!-- <bean id="AnExample" class="Annotation.Circle">
+      <property name="centre" ref="point1"></property>
+      </bean> -->
+      <bean id="point1" class="Annotation.Point">
+     <!--  <qualifier value="circle related"/> -->
+      <property name="x" value="1"/></bean>
+      <bean id="circle" class="Annotation.Circle">
+      </bean>
+     <!--  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean> -->
+      <context:annotation-config/>
+      </beans>

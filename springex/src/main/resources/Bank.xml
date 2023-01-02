@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+         xmlns:batch="http://www.springframework.org/schema/batch"
+         xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+      http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+      ">
+
+  <bean id="bankAccount1" class="Assignments.BankAccount">
+        <constructor-arg type = "long" value="16"/>
+        <constructor-arg value="sushma"/>
+        <constructor-arg value="Saving"/>
+        <constructor-arg type="double" value="15000"/>
+
+
+
+   </bean>
+    <bean id="bankAccount2" class="Assignments.BankAccount">
+        <constructor-arg type = "long" value="15"/>
+        <constructor-arg  type="String" value="srimanya"/>
+        <constructor-arg type="String" value="Current"/>
+        <constructor-arg type="double" value="20000"/>
+
+
+
+   </bean>
+
+  <!--   <bean id="BankRepo" class="Assignments.BankAccountRepositaryImpl">
+        <property name="bankAccount">
+            <list>
+                <ref bean="BankAccount1"/>
+                <ref bean="BankAccount2"/>
+            </list>
+        </property>
+    </bean>
+ -->
+
+
+
+   <!--  autowiring by Name
+    <bean id="BankRepo" class="Assignments.BankAccountRepositaryImpl" autowire="byName">
+    </bean>
+    -->
+
+
+
+   <!--  autowiring by type   ( it will work if we have only one type )
+    <bean id="BankRepo" class="Assignments.BankAccountRepositaryImpl" autowire="byType"/>
+    -->
+
+
+
+   <!--  autowiring by constructor -->
+   <bean id="BankRepo" class="Assignments.BankAccountRepositaryImpl" autowire="constructor">
+   </bean>
+  <bean id="controller" class="Assignments.BankAccountController">
+  </bean>
+</beans>
